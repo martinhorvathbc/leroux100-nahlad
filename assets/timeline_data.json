@@ -1,0 +1,2248 @@
+{
+ "meta": {
+  "source_timeline": "Fantom_casova_os_FINAL_rezia_2026-10-06.html",
+  "source_tech_script": "Fantom_technicky_scenar_HURRICANE_2026-10-07.xlsx",
+  "extracted": "2026-11-07",
+  "total_s": 4792.0,
+  "anim_s": 30,
+  "cues": 165,
+  "cues_xlsx": 165,
+  "konec_xlsx": "01:19:52",
+  "actors": 4,
+  "voices": 1,
+  "note": "Bez textu scenára. Bloky = repliky (165 cue vrátane Hudobného predelu, č. 97 zrušené). Hudba = úseky MASTER bez repliky > 3 s (hudba / ticho). Svetlo = koncepcia MH zo stĺpca Svetlo; stĺpce LED a Projekcia sú v zdroji prázdne."
+ },
+ "parts": [
+  {
+   "key": "prologue",
+   "fr": "Prologue",
+   "sk": "Prológ",
+   "short": "P",
+   "start": 0.0,
+   "end": 81.08
+  },
+  {
+   "key": "acte1",
+   "fr": "Acte I",
+   "sk": "Prvé dejstvo",
+   "short": "I",
+   "start": 81.08,
+   "end": 940.0
+  },
+  {
+   "key": "acte2",
+   "fr": "Acte II",
+   "sk": "Druhé dejstvo",
+   "short": "II",
+   "start": 940.0,
+   "end": 4038.4
+  },
+  {
+   "key": "acte3",
+   "fr": "Acte III",
+   "sk": "Tretie dejstvo",
+   "short": "III",
+   "start": 4038.4,
+   "end": 4331.0
+  },
+  {
+   "key": "epilogue",
+   "fr": "Épilogue",
+   "sk": "Epilóg",
+   "short": "Ép.",
+   "start": 4331.0,
+   "end": 4792.0
+  }
+ ],
+ "blocks": [
+  {
+   "id": 1,
+   "lane": "christine",
+   "start": 0.0,
+   "end": 6.72,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 2,
+   "lane": "persan",
+   "start": 81.08,
+   "end": 170.16,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 3,
+   "lane": "narratrice",
+   "start": 186.36,
+   "end": 283.52,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 4,
+   "lane": "raoul",
+   "start": 338.0,
+   "end": 359.32,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 5,
+   "lane": "christine",
+   "start": 360.12,
+   "end": 361.68,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 6,
+   "lane": "raoul",
+   "start": 362.48,
+   "end": 367.68,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 7,
+   "lane": "christine",
+   "start": 368.48,
+   "end": 378.36,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 8,
+   "lane": "raoul",
+   "start": 379.16,
+   "end": 388.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 9,
+   "lane": "christine",
+   "start": 388.8,
+   "end": 395.04,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 10,
+   "lane": "narratrice",
+   "start": 395.84,
+   "end": 407.8,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 11,
+   "lane": "raoul",
+   "start": 408.6,
+   "end": 454.36,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 12,
+   "lane": "narratrice",
+   "start": 455.0,
+   "end": 460.0,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 13,
+   "lane": "raoul",
+   "start": 461.0,
+   "end": 491.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 14,
+   "lane": "voix",
+   "start": 491.0,
+   "end": 496.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 15,
+   "lane": "christine",
+   "start": 499.84,
+   "end": 504.41,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 16,
+   "lane": "raoul",
+   "start": 505.21,
+   "end": 548.92,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 17,
+   "lane": "voix",
+   "start": 549.36,
+   "end": 551.36,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 18,
+   "lane": "christine",
+   "start": 551.72,
+   "end": 555.12,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 19,
+   "lane": "voix",
+   "start": 555.36,
+   "end": 617.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 20,
+   "lane": "raoul",
+   "start": 619.36,
+   "end": 677.12,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 21,
+   "lane": "raoul",
+   "start": 680.0,
+   "end": 761.4,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 22,
+   "lane": "persan",
+   "start": 761.48,
+   "end": 768.0,
+   "kind": "rec",
+   "sound": "pic"
+  },
+  {
+   "id": 23,
+   "lane": "raoul",
+   "start": 768.48,
+   "end": 771.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 24,
+   "lane": "persan",
+   "start": 771.48,
+   "end": 776.0,
+   "kind": "rec",
+   "sound": "pic"
+  },
+  {
+   "id": 25,
+   "lane": "persan",
+   "start": 780.0,
+   "end": 865.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 26,
+   "lane": "narratrice",
+   "start": 940.0,
+   "end": 1008.0,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 27,
+   "lane": "raoul",
+   "start": 1020.0,
+   "end": 1081.24,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 28,
+   "lane": "christine",
+   "start": 1082.05,
+   "end": 1190.44,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 29,
+   "lane": "raoul",
+   "start": 1191.24,
+   "end": 1196.59,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 30,
+   "lane": "christine",
+   "start": 1197.39,
+   "end": 1294.12,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 31,
+   "lane": "narratrice",
+   "start": 1294.92,
+   "end": 1326.03,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 33,
+   "lane": "christine",
+   "start": 1327.62,
+   "end": 1402.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 34,
+   "lane": "voix",
+   "start": 1403.0,
+   "end": 1410.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 35,
+   "lane": "narratrice",
+   "start": 1410.0,
+   "end": 1474.29,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 36,
+   "lane": "christine",
+   "start": 1475.09,
+   "end": 1501.53,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 37,
+   "lane": "raoul",
+   "start": 1502.33,
+   "end": 1520.99,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 38,
+   "lane": "christine",
+   "start": 1521.79,
+   "end": 1559.12,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 39,
+   "lane": "voix",
+   "start": 1559.48,
+   "end": 1580.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 40,
+   "lane": "christine",
+   "start": 1579.84,
+   "end": 1588.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 41,
+   "lane": "voix",
+   "start": 1588.24,
+   "end": 1614.84,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 42,
+   "lane": "christine",
+   "start": 1618.0,
+   "end": 1642.96,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 43,
+   "lane": "raoul",
+   "start": 1643.76,
+   "end": 1653.19,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 44,
+   "lane": "christine",
+   "start": 1653.99,
+   "end": 1657.31,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 45,
+   "lane": "christine",
+   "start": 1658.11,
+   "end": 1747.96,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 46,
+   "lane": "narratrice",
+   "start": 1749.0,
+   "end": 1799.74,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 47,
+   "lane": "christine",
+   "start": 1800.54,
+   "end": 1823.87,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 48,
+   "lane": "raoul",
+   "start": 1824.67,
+   "end": 1850.33,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 49,
+   "lane": "christine",
+   "start": 1851.13,
+   "end": 1934.53,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 50,
+   "lane": "christine",
+   "start": 1935.33,
+   "end": 1939.41,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 51,
+   "lane": "raoul",
+   "start": 1940.21,
+   "end": 1947.21,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 52,
+   "lane": "christine",
+   "start": 1948.01,
+   "end": 1990.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 53,
+   "lane": "narratrice",
+   "start": 1991.24,
+   "end": 2042.28,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 54,
+   "lane": "voix",
+   "start": 2042.72,
+   "end": 2047.12,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 55,
+   "lane": "christine",
+   "start": 2047.24,
+   "end": 2058.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 56,
+   "lane": "voix",
+   "start": 2059.0,
+   "end": 2065.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 57,
+   "lane": "christine",
+   "start": 2065.0,
+   "end": 2093.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 58,
+   "lane": "voix",
+   "start": 2093.12,
+   "end": 2110.32,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 59,
+   "lane": "raoul",
+   "start": 2110.32,
+   "end": 2114.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 60,
+   "lane": "christine",
+   "start": 2115.28,
+   "end": 2119.43,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 61,
+   "lane": "raoul",
+   "start": 2120.24,
+   "end": 2125.95,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 62,
+   "lane": "christine",
+   "start": 2126.75,
+   "end": 2136.11,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 63,
+   "lane": "raoul",
+   "start": 2136.91,
+   "end": 2148.34,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 64,
+   "lane": "christine",
+   "start": 2149.14,
+   "end": 2156.41,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 65,
+   "lane": "raoul",
+   "start": 2157.22,
+   "end": 2160.85,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 66,
+   "lane": "christine",
+   "start": 2161.65,
+   "end": 2165.29,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 67,
+   "lane": "raoul",
+   "start": 2166.09,
+   "end": 2182.2,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 68,
+   "lane": "christine",
+   "start": 2183.0,
+   "end": 2188.72,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 69,
+   "lane": "raoul",
+   "start": 2189.52,
+   "end": 2204.07,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 70,
+   "lane": "christine",
+   "start": 2204.87,
+   "end": 2206.11,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 71,
+   "lane": "raoul",
+   "start": 2206.91,
+   "end": 2231.33,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 72,
+   "lane": "christine",
+   "start": 2232.13,
+   "end": 2242.01,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 73,
+   "lane": "narratrice",
+   "start": 2242.81,
+   "end": 2253.2,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 74,
+   "lane": "raoul",
+   "start": 2254.0,
+   "end": 2263.88,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 75,
+   "lane": "christine",
+   "start": 2264.68,
+   "end": 2326.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 76,
+   "lane": "narratrice",
+   "start": 2326.6,
+   "end": 2357.53,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 77,
+   "lane": "christine",
+   "start": 2358.32,
+   "end": 2370.7,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 78,
+   "lane": "narratrice",
+   "start": 2371.49,
+   "end": 2402.42,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 79,
+   "lane": "christine",
+   "start": 2403.22,
+   "end": 2446.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 80,
+   "lane": "voix",
+   "start": 2448.0,
+   "end": 2460.72,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 81,
+   "lane": "christine",
+   "start": 2460.72,
+   "end": 2463.24,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 82,
+   "lane": "voix",
+   "start": 2463.24,
+   "end": 2464.24,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 83,
+   "lane": "christine",
+   "start": 2464.24,
+   "end": 2467.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 84,
+   "lane": "voix",
+   "start": 2467.0,
+   "end": 2482.48,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 85,
+   "lane": "christine",
+   "start": 2482.48,
+   "end": 2502.29,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 86,
+   "lane": "narratrice",
+   "start": 2503.09,
+   "end": 2549.0,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 87,
+   "lane": "voix",
+   "start": 2549.48,
+   "end": 2557.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 88,
+   "lane": "christine",
+   "start": 2558.0,
+   "end": 2580.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 89,
+   "lane": "voix",
+   "start": 2581.0,
+   "end": 2588.48,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 90,
+   "lane": "christine",
+   "start": 2589.0,
+   "end": 2607.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 91,
+   "lane": "voix",
+   "start": 2607.48,
+   "end": 2632.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 92,
+   "lane": "christine",
+   "start": 2632.0,
+   "end": 2644.44,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 93,
+   "lane": "voix",
+   "start": 2645.0,
+   "end": 2677.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 94,
+   "lane": "christine",
+   "start": 2679.0,
+   "end": 2694.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 95,
+   "lane": "voix",
+   "start": 2695.0,
+   "end": 2724.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 96,
+   "lane": "christine",
+   "start": 2724.0,
+   "end": 2791.66,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 98,
+   "lane": "raoul",
+   "start": 2793.26,
+   "end": 2804.04,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 99,
+   "lane": "christine",
+   "start": 2804.84,
+   "end": 2884.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 100,
+   "lane": "voix",
+   "start": 2885.0,
+   "end": 2936.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 101,
+   "lane": "christine",
+   "start": 2936.0,
+   "end": 2947.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 102,
+   "lane": "voix",
+   "start": 2947.84,
+   "end": 2970.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 103,
+   "lane": "christine",
+   "start": 2970.0,
+   "end": 2979.0,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 104,
+   "lane": "voix",
+   "start": 2979.48,
+   "end": 2987.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 105,
+   "lane": "christine",
+   "start": 2988.48,
+   "end": 3001.11,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 106,
+   "lane": "raoul",
+   "start": 3001.91,
+   "end": 3013.94,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 107,
+   "lane": "christine",
+   "start": 3014.74,
+   "end": 3019.55,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 108,
+   "lane": "raoul",
+   "start": 3020.35,
+   "end": 3034.19,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 109,
+   "lane": "christine",
+   "start": 3034.99,
+   "end": 3073.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 110,
+   "lane": "voix",
+   "start": 3075.0,
+   "end": 3181.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 111,
+   "lane": "christine",
+   "start": 3184.0,
+   "end": 3329.28,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 112,
+   "lane": "narratrice",
+   "start": 3332.0,
+   "end": 3367.76,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 113,
+   "lane": "christine",
+   "start": 3368.56,
+   "end": 3369.78,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 114,
+   "lane": "raoul",
+   "start": 3370.58,
+   "end": 3374.67,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 115,
+   "lane": "christine",
+   "start": 3375.47,
+   "end": 3397.95,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 116,
+   "lane": "raoul",
+   "start": 3398.75,
+   "end": 3409.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 117,
+   "lane": "christine",
+   "start": 3410.28,
+   "end": 3422.54,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 118,
+   "lane": "raoul",
+   "start": 3423.34,
+   "end": 3426.4,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 119,
+   "lane": "christine",
+   "start": 3427.2,
+   "end": 3445.09,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 120,
+   "lane": "raoul",
+   "start": 3445.89,
+   "end": 3452.53,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 121,
+   "lane": "christine",
+   "start": 3453.33,
+   "end": 3474.78,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 122,
+   "lane": "narratrice",
+   "start": 3475.59,
+   "end": 3495.0,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 123,
+   "lane": "voix",
+   "start": 3495.48,
+   "end": 3521.24,
+   "kind": "vo",
+   "sound": "special"
+  },
+  {
+   "id": 124,
+   "lane": "narratrice",
+   "start": 3525.0,
+   "end": 3570.0,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 125,
+   "lane": "persan",
+   "start": 3570.8,
+   "end": 3578.24,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 126,
+   "lane": "persan",
+   "start": 3579.04,
+   "end": 3594.84,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 127,
+   "lane": "raoul",
+   "start": 3595.64,
+   "end": 3603.08,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 128,
+   "lane": "voix",
+   "start": 3603.48,
+   "end": 3713.72,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 129,
+   "lane": "raoul",
+   "start": 3714.48,
+   "end": 3715.74,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 130,
+   "lane": "christine",
+   "start": 3716.54,
+   "end": 3717.79,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 131,
+   "lane": "raoul",
+   "start": 3718.59,
+   "end": 3732.31,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 132,
+   "lane": "christine",
+   "start": 3733.11,
+   "end": 3748.94,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 133,
+   "lane": "raoul",
+   "start": 3749.74,
+   "end": 3753.43,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 134,
+   "lane": "christine",
+   "start": 3754.23,
+   "end": 3767.42,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 135,
+   "lane": "raoul",
+   "start": 3768.22,
+   "end": 3769.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 136,
+   "lane": "voix",
+   "start": 3769.48,
+   "end": 3852.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 137,
+   "lane": "raoul",
+   "start": 3852.8,
+   "end": 3856.28,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 138,
+   "lane": "persan",
+   "start": 3857.08,
+   "end": 3867.03,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 139,
+   "lane": "raoul",
+   "start": 3867.83,
+   "end": 3871.82,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 140,
+   "lane": "persan",
+   "start": 3872.61,
+   "end": 3875.6,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 141,
+   "lane": "voix",
+   "start": 3876.0,
+   "end": 3886.0,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 142,
+   "lane": "narratrice",
+   "start": 3886.8,
+   "end": 3926.8,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 143,
+   "lane": "voix",
+   "start": 3927.2,
+   "end": 3937.35,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 144,
+   "lane": "raoul",
+   "start": 3938.15,
+   "end": 3950.47,
+   "kind": "rec",
+   "sound": "pic"
+  },
+  {
+   "id": 145,
+   "lane": "voix",
+   "start": 3951.27,
+   "end": 3957.07,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 146,
+   "lane": "christine",
+   "start": 3957.87,
+   "end": 3959.6,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 147,
+   "lane": "voix",
+   "start": 3960.0,
+   "end": 3961.6,
+   "kind": "vo",
+   "sound": "voix"
+  },
+  {
+   "id": 148,
+   "lane": "raoul",
+   "start": 3962.4,
+   "end": 3967.36,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 149,
+   "lane": "persan",
+   "start": 3968.16,
+   "end": 3975.6,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 150,
+   "lane": "narratrice",
+   "start": 3976.0,
+   "end": 4037.6,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 151,
+   "lane": "persan",
+   "start": 4038.4,
+   "end": 4086.05,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 152,
+   "lane": "persan",
+   "start": 4086.85,
+   "end": 4096.84,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 153,
+   "lane": "voix",
+   "start": 4097.64,
+   "end": 4123.77,
+   "kind": "live",
+   "sound": "voix"
+  },
+  {
+   "id": 154,
+   "lane": "persan",
+   "start": 4124.57,
+   "end": 4130.72,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 155,
+   "lane": "voix",
+   "start": 4131.52,
+   "end": 4133.35,
+   "kind": "live",
+   "sound": "voix"
+  },
+  {
+   "id": 156,
+   "lane": "persan",
+   "start": 4134.15,
+   "end": 4138.76,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 157,
+   "lane": "voix",
+   "start": 4139.56,
+   "end": 4171.84,
+   "kind": "live",
+   "sound": "voix"
+  },
+  {
+   "id": 158,
+   "lane": "persan",
+   "start": 4172.64,
+   "end": 4178.78,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 159,
+   "lane": "voix",
+   "start": 4179.58,
+   "end": 4287.94,
+   "kind": "live",
+   "sound": "voix"
+  },
+  {
+   "id": 160,
+   "lane": "persan",
+   "start": 4288.74,
+   "end": 4309.49,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 161,
+   "lane": "voix",
+   "start": 4310.29,
+   "end": 4312.12,
+   "kind": "live",
+   "sound": "voix"
+  },
+  {
+   "id": 162,
+   "lane": "persan",
+   "start": 4312.92,
+   "end": 4330.6,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 163,
+   "lane": "christine",
+   "start": 4331.0,
+   "end": 4334.48,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 164,
+   "lane": "narratrice",
+   "start": 4337.48,
+   "end": 4342.24,
+   "kind": "live",
+   "sound": "narr"
+  },
+  {
+   "id": 165,
+   "lane": "raoul",
+   "start": 4343.04,
+   "end": 4441.6,
+   "kind": "live",
+   "sound": "direct"
+  },
+  {
+   "id": 166,
+   "lane": "voix",
+   "start": 4442.0,
+   "end": 4792.0,
+   "kind": "vo",
+   "sound": "voix"
+  }
+ ],
+ "music": [
+  {
+   "start": 6.72,
+   "end": 81.08,
+   "kind": "gap"
+  },
+  {
+   "start": 170.16,
+   "end": 186.36,
+   "kind": "gap"
+  },
+  {
+   "start": 283.52,
+   "end": 338.0,
+   "kind": "gap"
+  },
+  {
+   "start": 496.0,
+   "end": 499.84,
+   "kind": "gap"
+  },
+  {
+   "start": 776.0,
+   "end": 780.0,
+   "kind": "gap"
+  },
+  {
+   "start": 865.0,
+   "end": 940.0,
+   "kind": "gap"
+  },
+  {
+   "start": 1008.0,
+   "end": 1020.0,
+   "kind": "gap"
+  },
+  {
+   "start": 1326.83,
+   "end": 1326.83,
+   "kind": "interlude",
+   "id": 32
+  },
+  {
+   "start": 1614.84,
+   "end": 1618.0,
+   "kind": "gap"
+  },
+  {
+   "start": 3521.24,
+   "end": 3525.0,
+   "kind": "gap"
+  }
+ ],
+ "sound": [
+  {
+   "start": 0.0,
+   "end": 6.72,
+   "mode": "direct"
+  },
+  {
+   "start": 81.08,
+   "end": 170.16,
+   "mode": "narr"
+  },
+  {
+   "start": 186.36,
+   "end": 283.52,
+   "mode": "narr"
+  },
+  {
+   "start": 338.0,
+   "end": 359.32,
+   "mode": "narr"
+  },
+  {
+   "start": 360.12,
+   "end": 395.04,
+   "mode": "direct"
+  },
+  {
+   "start": 395.84,
+   "end": 407.8,
+   "mode": "narr"
+  },
+  {
+   "start": 408.6,
+   "end": 454.36,
+   "mode": "direct"
+  },
+  {
+   "start": 455.0,
+   "end": 460.0,
+   "mode": "narr"
+  },
+  {
+   "start": 461.0,
+   "end": 491.0,
+   "mode": "direct"
+  },
+  {
+   "start": 491.0,
+   "end": 496.0,
+   "mode": "voix"
+  },
+  {
+   "start": 499.84,
+   "end": 548.92,
+   "mode": "direct"
+  },
+  {
+   "start": 549.36,
+   "end": 551.36,
+   "mode": "voix"
+  },
+  {
+   "start": 551.72,
+   "end": 555.12,
+   "mode": "direct"
+  },
+  {
+   "start": 555.36,
+   "end": 617.0,
+   "mode": "voix"
+  },
+  {
+   "start": 619.36,
+   "end": 761.4,
+   "mode": "direct"
+  },
+  {
+   "start": 761.48,
+   "end": 768.0,
+   "mode": "pic"
+  },
+  {
+   "start": 768.48,
+   "end": 771.48,
+   "mode": "direct"
+  },
+  {
+   "start": 771.48,
+   "end": 776.0,
+   "mode": "pic"
+  },
+  {
+   "start": 780.0,
+   "end": 865.0,
+   "mode": "direct"
+  },
+  {
+   "start": 940.0,
+   "end": 1008.0,
+   "mode": "narr"
+  },
+  {
+   "start": 1020.0,
+   "end": 1294.12,
+   "mode": "direct"
+  },
+  {
+   "start": 1294.92,
+   "end": 1326.03,
+   "mode": "narr"
+  },
+  {
+   "start": 1327.62,
+   "end": 1402.48,
+   "mode": "direct"
+  },
+  {
+   "start": 1403.0,
+   "end": 1410.0,
+   "mode": "voix"
+  },
+  {
+   "start": 1410.0,
+   "end": 1474.29,
+   "mode": "narr"
+  },
+  {
+   "start": 1475.09,
+   "end": 1559.12,
+   "mode": "direct"
+  },
+  {
+   "start": 1559.48,
+   "end": 1580.0,
+   "mode": "voix"
+  },
+  {
+   "start": 1579.84,
+   "end": 1588.0,
+   "mode": "direct"
+  },
+  {
+   "start": 1588.24,
+   "end": 1614.84,
+   "mode": "voix"
+  },
+  {
+   "start": 1618.0,
+   "end": 1747.96,
+   "mode": "direct"
+  },
+  {
+   "start": 1749.0,
+   "end": 1799.74,
+   "mode": "narr"
+  },
+  {
+   "start": 1800.54,
+   "end": 1990.0,
+   "mode": "direct"
+  },
+  {
+   "start": 1991.24,
+   "end": 2042.28,
+   "mode": "narr"
+  },
+  {
+   "start": 2042.72,
+   "end": 2047.12,
+   "mode": "voix"
+  },
+  {
+   "start": 2047.24,
+   "end": 2058.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2059.0,
+   "end": 2065.0,
+   "mode": "voix"
+  },
+  {
+   "start": 2065.0,
+   "end": 2093.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2093.12,
+   "end": 2110.32,
+   "mode": "voix"
+  },
+  {
+   "start": 2110.32,
+   "end": 2242.01,
+   "mode": "direct"
+  },
+  {
+   "start": 2242.81,
+   "end": 2253.2,
+   "mode": "narr"
+  },
+  {
+   "start": 2254.0,
+   "end": 2326.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2326.6,
+   "end": 2357.53,
+   "mode": "narr"
+  },
+  {
+   "start": 2358.32,
+   "end": 2370.7,
+   "mode": "direct"
+  },
+  {
+   "start": 2371.49,
+   "end": 2402.42,
+   "mode": "narr"
+  },
+  {
+   "start": 2403.22,
+   "end": 2446.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2448.0,
+   "end": 2460.72,
+   "mode": "voix"
+  },
+  {
+   "start": 2460.72,
+   "end": 2463.24,
+   "mode": "direct"
+  },
+  {
+   "start": 2463.24,
+   "end": 2464.24,
+   "mode": "voix"
+  },
+  {
+   "start": 2464.24,
+   "end": 2467.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2467.0,
+   "end": 2482.48,
+   "mode": "voix"
+  },
+  {
+   "start": 2482.48,
+   "end": 2502.29,
+   "mode": "direct"
+  },
+  {
+   "start": 2503.09,
+   "end": 2549.0,
+   "mode": "narr"
+  },
+  {
+   "start": 2549.48,
+   "end": 2557.0,
+   "mode": "voix"
+  },
+  {
+   "start": 2558.0,
+   "end": 2580.48,
+   "mode": "direct"
+  },
+  {
+   "start": 2581.0,
+   "end": 2588.48,
+   "mode": "voix"
+  },
+  {
+   "start": 2589.0,
+   "end": 2607.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2607.48,
+   "end": 2632.0,
+   "mode": "voix"
+  },
+  {
+   "start": 2632.0,
+   "end": 2644.44,
+   "mode": "direct"
+  },
+  {
+   "start": 2645.0,
+   "end": 2677.0,
+   "mode": "voix"
+  },
+  {
+   "start": 2679.0,
+   "end": 2694.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2695.0,
+   "end": 2724.0,
+   "mode": "voix"
+  },
+  {
+   "start": 2724.0,
+   "end": 2884.48,
+   "mode": "direct"
+  },
+  {
+   "start": 2885.0,
+   "end": 2936.0,
+   "mode": "voix"
+  },
+  {
+   "start": 2936.0,
+   "end": 2947.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2947.84,
+   "end": 2970.0,
+   "mode": "voix"
+  },
+  {
+   "start": 2970.0,
+   "end": 2979.0,
+   "mode": "direct"
+  },
+  {
+   "start": 2979.48,
+   "end": 2987.0,
+   "mode": "voix"
+  },
+  {
+   "start": 2988.48,
+   "end": 3073.48,
+   "mode": "direct"
+  },
+  {
+   "start": 3075.0,
+   "end": 3181.0,
+   "mode": "voix"
+  },
+  {
+   "start": 3184.0,
+   "end": 3329.28,
+   "mode": "direct"
+  },
+  {
+   "start": 3332.0,
+   "end": 3367.76,
+   "mode": "narr"
+  },
+  {
+   "start": 3368.56,
+   "end": 3474.78,
+   "mode": "direct"
+  },
+  {
+   "start": 3475.59,
+   "end": 3495.0,
+   "mode": "narr"
+  },
+  {
+   "start": 3495.48,
+   "end": 3521.24,
+   "mode": "special"
+  },
+  {
+   "start": 3525.0,
+   "end": 3603.08,
+   "mode": "narr"
+  },
+  {
+   "start": 3603.48,
+   "end": 3713.72,
+   "mode": "voix"
+  },
+  {
+   "start": 3714.48,
+   "end": 3769.48,
+   "mode": "direct"
+  },
+  {
+   "start": 3769.48,
+   "end": 3852.0,
+   "mode": "voix"
+  },
+  {
+   "start": 3852.8,
+   "end": 3875.6,
+   "mode": "direct"
+  },
+  {
+   "start": 3876.0,
+   "end": 3886.0,
+   "mode": "voix"
+  },
+  {
+   "start": 3886.8,
+   "end": 3926.8,
+   "mode": "narr"
+  },
+  {
+   "start": 3927.2,
+   "end": 3937.35,
+   "mode": "voix"
+  },
+  {
+   "start": 3938.15,
+   "end": 3950.47,
+   "mode": "pic"
+  },
+  {
+   "start": 3951.27,
+   "end": 3957.07,
+   "mode": "voix"
+  },
+  {
+   "start": 3957.87,
+   "end": 3959.6,
+   "mode": "direct"
+  },
+  {
+   "start": 3960.0,
+   "end": 3961.6,
+   "mode": "voix"
+  },
+  {
+   "start": 3962.4,
+   "end": 3975.6,
+   "mode": "direct"
+  },
+  {
+   "start": 3976.0,
+   "end": 4037.6,
+   "mode": "narr"
+  },
+  {
+   "start": 4038.4,
+   "end": 4096.84,
+   "mode": "direct"
+  },
+  {
+   "start": 4097.64,
+   "end": 4123.77,
+   "mode": "voix"
+  },
+  {
+   "start": 4124.57,
+   "end": 4130.72,
+   "mode": "direct"
+  },
+  {
+   "start": 4131.52,
+   "end": 4133.35,
+   "mode": "voix"
+  },
+  {
+   "start": 4134.15,
+   "end": 4138.76,
+   "mode": "direct"
+  },
+  {
+   "start": 4139.56,
+   "end": 4171.84,
+   "mode": "voix"
+  },
+  {
+   "start": 4172.64,
+   "end": 4178.78,
+   "mode": "direct"
+  },
+  {
+   "start": 4179.58,
+   "end": 4287.94,
+   "mode": "voix"
+  },
+  {
+   "start": 4288.74,
+   "end": 4309.49,
+   "mode": "direct"
+  },
+  {
+   "start": 4310.29,
+   "end": 4312.12,
+   "mode": "voix"
+  },
+  {
+   "start": 4312.92,
+   "end": 4334.48,
+   "mode": "direct"
+  },
+  {
+   "start": 4337.48,
+   "end": 4342.24,
+   "mode": "narr"
+  },
+  {
+   "start": 4343.04,
+   "end": 4441.6,
+   "mode": "direct"
+  },
+  {
+   "start": 4442.0,
+   "end": 4792.0,
+   "mode": "voix"
+  }
+ ],
+ "light": [
+  {
+   "start": 0.0,
+   "state": "awake",
+   "ids": [
+    1,
+    1
+   ],
+   "xlsx_row": 7,
+   "end": 81.08
+  },
+  {
+   "start": 81.08,
+   "state": "warm",
+   "ids": [
+    2,
+    13
+   ],
+   "xlsx_row": 8,
+   "end": 491.0
+  },
+  {
+   "start": 491.0,
+   "state": "red",
+   "ids": [
+    14,
+    19
+   ],
+   "xlsx_row": 20,
+   "end": 619.36
+  },
+  {
+   "start": 619.36,
+   "state": "drama",
+   "ids": [
+    20,
+    25
+   ],
+   "xlsx_row": 26,
+   "end": 940.0
+  },
+  {
+   "start": 940.0,
+   "state": "warm",
+   "ids": [
+    26,
+    26
+   ],
+   "xlsx_row": 32,
+   "end": 1020.0
+  },
+  {
+   "start": 1020.0,
+   "state": "dim",
+   "ids": [
+    27,
+    38
+   ],
+   "xlsx_row": 33,
+   "end": 1559.48
+  },
+  {
+   "start": 1559.48,
+   "state": "red",
+   "ids": [
+    39,
+    41
+   ],
+   "xlsx_row": 45,
+   "end": 1618.0
+  },
+  {
+   "start": 1618.0,
+   "state": "dim",
+   "ids": [
+    42,
+    45
+   ],
+   "xlsx_row": 48,
+   "end": 1749.0
+  },
+  {
+   "start": 1749.0,
+   "state": "dark",
+   "ids": [
+    46,
+    49
+   ],
+   "xlsx_row": 52,
+   "end": 1935.33
+  },
+  {
+   "start": 1935.33,
+   "state": "red",
+   "ids": [
+    50,
+    50
+   ],
+   "xlsx_row": 56,
+   "end": 1940.21
+  },
+  {
+   "start": 1940.21,
+   "state": "dark",
+   "ids": [
+    51,
+    53
+   ],
+   "xlsx_row": 57,
+   "end": 2042.72
+  },
+  {
+   "start": 2042.72,
+   "state": "red",
+   "ids": [
+    54,
+    58
+   ],
+   "xlsx_row": 57,
+   "end": 2110.32
+  },
+  {
+   "start": 2110.32,
+   "state": "dark",
+   "ids": [
+    59,
+    79
+   ],
+   "xlsx_row": 57,
+   "end": 2448.0
+  },
+  {
+   "start": 2448.0,
+   "state": "red",
+   "ids": [
+    80,
+    104
+   ],
+   "xlsx_row": 84,
+   "end": 2988.48
+  },
+  {
+   "start": 2988.48,
+   "state": "blue",
+   "ids": [
+    105,
+    109
+   ],
+   "xlsx_row": 110,
+   "end": 3075.0
+  },
+  {
+   "start": 3075.0,
+   "state": "red",
+   "ids": [
+    110,
+    111
+   ],
+   "xlsx_row": 115,
+   "end": 3332.0
+  },
+  {
+   "start": 3332.0,
+   "state": "warm",
+   "ids": [
+    112,
+    112
+   ],
+   "xlsx_row": 117,
+   "end": 3368.56
+  },
+  {
+   "start": 3368.56,
+   "state": "redblue",
+   "ids": [
+    113,
+    122
+   ],
+   "xlsx_row": 118,
+   "end": 3495.48
+  },
+  {
+   "start": 3495.48,
+   "state": "red",
+   "ids": [
+    123,
+    123
+   ],
+   "xlsx_row": 128,
+   "end": 3525.0
+  },
+  {
+   "start": 3525.0,
+   "state": "warm",
+   "ids": [
+    124,
+    127
+   ],
+   "xlsx_row": 129,
+   "end": 3603.48
+  },
+  {
+   "start": 3603.48,
+   "state": "redblue",
+   "ids": [
+    128,
+    148
+   ],
+   "xlsx_row": 133,
+   "end": 3968.16
+  },
+  {
+   "start": 3968.16,
+   "state": "black",
+   "ids": [
+    149,
+    149
+   ],
+   "xlsx_row": 154,
+   "end": 3976.0
+  },
+  {
+   "start": 3976.0,
+   "state": "warm",
+   "ids": [
+    150,
+    150
+   ],
+   "xlsx_row": 155,
+   "end": 4038.4
+  },
+  {
+   "start": 4038.4,
+   "state": "redsoft",
+   "ids": [
+    151,
+    161
+   ],
+   "xlsx_row": 156,
+   "end": 4312.92
+  },
+  {
+   "start": 4312.92,
+   "state": "white",
+   "ids": [
+    162,
+    165
+   ],
+   "xlsx_row": 167,
+   "end": 4442.0
+  },
+  {
+   "start": 4442.0,
+   "state": "whitered",
+   "ids": [
+    166,
+    166
+   ],
+   "xlsx_row": 171,
+   "end": 4792.0
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "fr": "Dans le noir, une première voix. La lumière s’éveille lentement.",
+   "sk": "V tme prvý hlas. Svetlo sa pomaly prebúdza.",
+   "src": "xlsx r. 7"
+  },
+  {
+   "t": 491,
+   "fr": "Le Fantôme n’a pas de corps : sa voix arrive de partout à la fois, et la lumière passe au rouge.",
+   "sk": "Fantóm nemá telo: jeho hlas prichádza zo všetkých strán naraz a svetlo prejde do červenej.",
+   "src": "xlsx r. 20"
+  },
+  {
+   "t": 940,
+   "fr": "Les comédiens jouent en direct, le son les place dans l’espace. Le récit, lui, enveloppe tout le public.",
+   "sk": "Herci hrajú naživo, zvuk ich umiestni v priestore. Rozprávanie obklopí celé publikum.",
+   "src": "xlsx r. 8, 9, 32; legenda osi LIVE"
+  },
+  {
+   "t": 1935,
+   "fr": "Le son et la lumière s’assombrissent ; le rouge du Fantôme gagne la salle.",
+   "sk": "Zvuk aj svetlo stmavnú, Fantómova červená zaplní sálu.",
+   "src": "xlsx r. 52, 56"
+  },
+  {
+   "t": 2988,
+   "fr": "Le rouge du Fantôme, le bleu de Raoul : deux mondes face à face.",
+   "sk": "Fantómova červená a Raoulova modrá: dva svety proti sebe.",
+   "src": "xlsx r. 110, 118, 133"
+  },
+  {
+   "t": 3495,
+   "fr": "Silence. Puis le son tombe d’en haut, de tous côtés, et converge au centre de la salle.",
+   "sk": "Ticho. Potom zvuk padne zhora, zo všetkých strán, a zbehne sa v strede sály.",
+   "src": "xlsx r. 128"
+  },
+  {
+   "t": 3968,
+   "fr": "La salle s’éteint. Le dernier acte garde le rouge, plus sourd.",
+   "sk": "Sála zhasne. Posledné dejstvo ostáva v červenej, tlmenejšej.",
+   "src": "xlsx r. 154, 156"
+  },
+  {
+   "t": 4313,
+   "fr": "La lumière s’éclaircit jusqu’au blanc. La dernière voix emplit toute la salle.",
+   "sk": "Svetlo sa rozjasní do bielej. Posledný hlas naplní celú sálu.",
+   "src": "xlsx r. 167, 171"
+  }
+ ]
+}
