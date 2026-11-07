@@ -14,7 +14,7 @@
   }
   tick();
   /* form -> mailto (no backend, no automatic sending) */
-  var TO="william@leroux100.com";
+  var TO="zelmanovic@leroux100.com";
   var L={
     fr:{lic:"Demande de licence",nuit:"Rejoindre la NUIT LEROUX",both:"Demande de licence et NUIT LEROUX",
         h:"Bonjour,",t:"Théâtre / institution",c:"Ville, pays",n:"Nom",e:"E-mail",l:"Langue de la représentation",m:"Message",
