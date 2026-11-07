@@ -289,3 +289,10 @@ footer .fam .ly-seal-i{vertical-align:-5px;margin-right:6px}
 @media (max-width:860px){.ly-legend,.ly-qs,.ly-fs,.ly-works{grid-template-columns:1fr}.ly-sources{columns:1}.ly-seal span{font-size:11.5px;letter-spacing:.1em}}
 .grid2>.ly-q{align-self:start}
 .cap .src19{margin-top:8px;font:400 11px/1.45 Inter,system-ui,sans-serif;letter-spacing:.02em;color:var(--dim)}.cap .src19 a{color:inherit;text-decoration:underline;text-decoration-color:rgba(214,170,92,.35)}
+
+/* kontakt: producent a projektový manažér nad tabuľkou trhov (7. 11. 2026) */
+.team2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;margin:22px 0 6px}
+.team2 .eb{display:block;margin-bottom:4px}
+.team2 b{display:block;font-weight:400;font-size:21px;line-height:1.25;color:var(--ink)}
+.team2 a{display:inline-block;margin-top:4px;font-family:Inter,system-ui,sans-serif;font-size:15.5px;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,166,107,.4);word-break:break-all}
+@media (max-width:560px){.team2{grid-template-columns:1fr}}
