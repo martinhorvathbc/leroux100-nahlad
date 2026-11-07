@@ -1,5 +1,5 @@
-/* LEROUX100 – „Comment c’est fait / Ako je to urobené“ (7. 11. 2026, 60 s podľa Martina 20.10)
-   Celé predstavenie 1:19:52 za 60 s: hlava prechádza osou, bloky sa rozsvecujú, nad osou časť, časomiera a popisok.
+/* LEROUX100 – „Comment c’est fait / Ako je to urobené“ (7. 11. 2026, 5 minút podľa Martina 20.44 – 20.51; predtým 60 s)
+   Celé predstavenie 1:19:52 za 300 s: hlava prechádza osou, bloky sa rozsvecujú, nad osou časť, časomiera a popisok.
    Kruh priestorového zvuku: 12 reproduktorov, žiara s nábehom a pomalým dozvukom, zdroj zvuku sa plynulo presúva
    po kruhu a ťahá za sebou stopu; režimy sa prelínajú. Spustí sa samo po dorolovaní, pri odrolovaní sa pozastaví.
    prefers-reduced-motion a bez JS: statická os. Test: ?tla=12 nastaví 12. sekundu animácie a zastaví. */
@@ -60,7 +60,7 @@
 
   function setup(root){
     if(root.__tla)return root.__tla;
-    var TOT=parseFloat(root.getAttribute("data-total"))||4792,DUR=(parseFloat(root.getAttribute("data-dur"))||60)*1000;
+    var TOT=parseFloat(root.getAttribute("data-total"))||4792,DUR=(parseFloat(root.getAttribute("data-dur"))||300)*1000;
     var o={root:root,t:0,playing:false,started:false,ended:false,auto:false,last:0,raf:0};
     root.__tla=o;
     if(RM)return o;
@@ -74,12 +74,21 @@
     var ph=q(root,".tla-ph"),tcEl=q(root,".tla-tc"),partEl=q(root,".tla-part"),capEl=q(root,".tla-cap"),bar=q(root,".tla-bar span"),axis=q(root,".tla-axis"),
         stS=q(root,".tla-st-s span"),stL=q(root,".tla-st-l span"),pp=q(root,".tla-pp"),grid=q(root,".tla-track"),totEl=q(root,".tla-tot");
     var ring=Ring(q(root,".tla-ring"));
+    // pás „kam patrí hudba“: zoznam miest sa rozsvieti podľa hlavy; zvuk (ak je súbor) len po kliknutí
+    var mli=qa(root,".tla-mlist li").map(function(el){return{el:el,a:+el.getAttribute("data-a"),b:+el.getAttribute("data-b"),s:-1}});
+    var aud=q(root,".tla-aud"),sndBtn=q(root,".tla-snd"),wantSnd=false;
+    function audSync(force){if(!aud||!wantSnd)return;var want=o.t/1000;
+      if(o.playing&&!o.ended){if(force||Math.abs(aud.currentTime-want)>.7){try{aud.currentTime=want}catch(e){}}if(aud.paused){var pr=aud.play();if(pr&&pr.catch)pr.catch(function(){})}}
+      else if(!aud.paused)aud.pause()}
+    if(sndBtn&&aud)sndBtn.addEventListener("click",function(){wantSnd=!wantSnd;sndBtn.setAttribute("aria-pressed",wantSnd?"true":"false");
+      sndBtn.textContent=sndBtn.getAttribute(wantSnd?"data-off":"data-on");if(wantSnd)audSync(true);else aud.pause()});
     if(totEl)totEl.innerHTML=totEl.textContent.replace(/(\d+:\d\d:\d\d)/,function(x){return tcH(TOT)});
     var curCap=-1,curSnd="",curLum="",curPart="",curSec=-1,capTo=0;
     function find(arr,T){for(var i=0;i<arr.length;i++){if(T>=arr[i].a&&T<arr[i].b)return arr[i]}return null}
     function render(dt){
       var p=Math.min(1,o.t/DUR),T=p*TOT;
-      ph.style.left=(p*100)+"%";bar.style.width=(p*100)+"%";
+      ph.style.left=(p*100)+"%";bar.style.width=(p*100)+"%";root.style.setProperty("--p",(p*100).toFixed(3)+"%");
+      for(var mi=0;mi<mli.length;mi++){var ml=mli[mi],ms=T>=ml.a?(T<ml.b?2:1):0;if(p>=1)ms=1;if(ms!==ml.s){ml.s=ms;ml.el.classList.toggle("is-on",ms>0);ml.el.classList.toggle("is-now",ms===2)}}
       var sec=Math.round(T);if(sec!==curSec){curSec=sec;tcEl.innerHTML=tcH(T);axis.setAttribute("aria-valuenow",sec);axis.setAttribute("aria-valuetext",tc(T))}
       for(var i=0;i<els.length;i++){var e=els[i],s=T>=e.a?(T<e.b||(e.b-e.a<40&&T<e.a+40)?2:1):0;
         if(p>=1)s=1;
@@ -93,6 +102,7 @@
       var lm=find(lum,T),l=lm?lm.m:(lum.length?lum[lum.length-1].m:"");
       if(l!==curLum){curLum=l;root.setAttribute("data-lum",l);stL.textContent=root.getAttribute("data-l-"+l)||""}
       ring.tick(dt||16,p>=1?"":m);
+      audSync(false);
       root.classList.toggle("is-end",p>=1);
     }
     // kruh dobieha (dozvuk) aj počas pauzy a po konci, kým nestíchne
@@ -107,8 +117,8 @@
       if(o.playing)o.raf=requestAnimationFrame(frame);
     }
     function label(){var on=o.playing;pp.setAttribute("aria-label",root.getAttribute(on?"data-pause":"data-play"));root.classList.toggle("is-playing",on)}
-    function play(){if(o.ended||o.t>=DUR){o.t=0;o.ended=false}o.started=true;o.playing=true;o.last=0;label();if(!o.raf)o.raf=requestAnimationFrame(frame)}
-    function stop(){o.playing=false;label();settleStart()}
+    function play(){if(o.ended||o.t>=DUR){o.t=0;o.ended=false}o.started=true;o.playing=true;o.last=0;label();audSync(true);if(!o.raf)o.raf=requestAnimationFrame(frame)}
+    function stop(){o.playing=false;label();audSync(false);settleStart()}
     o.play=play;o.pause=stop;o.render=render;
     o.seek=function(sec){o.t=Math.max(0,Math.min(DUR,sec*1000));o.ended=o.t>=DUR;for(var n=0;n<60;n++)render(50)};
     pp.addEventListener("click",function(){o.auto=false;if(o.playing)stop();else play()});

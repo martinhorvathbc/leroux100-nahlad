@@ -190,3 +190,39 @@
 @media (prefers-reduced-motion:reduce){
   .tla *,.tla-stage:after{animation:none!important;transition:none!important}
 }
+
+/* ---- pás „kam patrí hudba“ (7. 11. 2026, Martin 20.44 – 20.51: pod animáciou hudba a popisy, kam patrí) ---- */
+.tla-lane.tla-mband{height:46px;margin-top:6px;border-bottom:0;background:linear-gradient(180deg,rgba(111,15,29,.10),rgba(8,5,4,0));border-top:1px solid rgba(214,170,92,.22)}
+.tla-env{position:absolute;inset:3px 0;width:100%;height:calc(100% - 6px);display:block}
+.tla-env .mb-ghost{fill:rgba(214,170,92,.16)}
+.tla-env .mb-lit{fill:rgba(239,204,138,.82);clip-path:inset(0 calc(100% - var(--p,100%)) 0 0)}
+.tla.is-anim .tla-env .mb-lit{filter:drop-shadow(0 0 5px rgba(239,204,138,.35))}
+.tla-mband .b{top:0;bottom:0;border-radius:0;background:transparent}
+.tla-mband .b.mb-gap{background:rgba(224,169,78,.10);border-left:1px solid rgba(224,169,78,.45);border-right:1px solid rgba(224,169,78,.45)}
+.tla.is-static .tla-mband .b.mb-gap,.tla-mband .b.mb-gap.is-on{background:rgba(224,169,78,.18)}
+.tla-mband .b.mb-gap.is-now{background:rgba(224,169,78,.34)}
+.tla-mband .b.mb-interlude{background:var(--t-amber);min-width:4px;top:0;bottom:0;box-shadow:0 0 10px rgba(224,169,78,.7)}
+.tla-mband .b.mb-peak{top:auto;bottom:-1px;height:3px;background:rgba(241,223,182,.35)}
+.tla.is-static .tla-mband .b.mb-peak,.tla-mband .b.mb-peak.is-on{background:var(--t-cream)}
+.tla-mband .b.is-now{box-shadow:none}
+.tla-mpanel{margin-top:16px;padding-top:12px;border-top:1px solid rgba(214,170,92,.18)}
+.tla-mhead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px}
+.tla-mslot{margin:0;font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:17px;color:var(--t-mute)}
+.tla-mslot.is-on{font-style:normal;color:var(--t-ink)}
+.tla-snd{margin-left:10px;font:600 11px/1 Inter,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--t-gold2);background:transparent;border:1px solid var(--t-gold);border-radius:2px;padding:7px 11px;cursor:pointer}
+.tla-snd:hover,.tla-snd[aria-pressed="true"]{background:rgba(214,170,92,.14)}
+.tla-snd:focus-visible{outline:2px solid var(--t-gold2);outline-offset:2px}
+.tla-mlead{margin:8px 0 0;font-size:15px;color:var(--t-mute);max-width:760px}
+.tla-mlist{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-auto-flow:column;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(var(--r,6),auto);gap:3px 30px}
+.tla-mlist li{font-family:"Cormorant Garamond",Georgia,serif;font-size:16.5px;line-height:1.35;color:var(--t-mute);padding:3px 0 3px 68px;position:relative;transition:color .6s}
+.tla-mlist li span{position:absolute;left:0;top:.42em;font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.06em;color:var(--t-dim);font-variant-numeric:tabular-nums}
+.tla-mlist li b{font-weight:500;color:inherit}
+.tla.is-static .tla-mlist li,.tla-mlist li.is-on{color:var(--t-ink)}
+.tla-mlist li.is-on span{color:var(--t-gold)}
+.tla-mlist li.is-now{color:var(--t-gold2)}
+.tla-mlist li.is-now span{color:var(--t-amber)}
+@media (max-width:860px){
+  .tla-lane.tla-mband{height:38px}
+  .tla-mlist{grid-auto-flow:row;grid-template-columns:1fr;grid-template-rows:none}
+  .tla-mslot{font-size:16px}
+}
