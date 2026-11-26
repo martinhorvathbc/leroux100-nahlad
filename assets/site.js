@@ -21,8 +21,11 @@
         done:"Votre messagerie s’ouvre avec le message prêt à envoyer. Rien n’est envoyé automatiquement."},
     sk:{lic:"Žiadosť o licenciu",nuit:"Pripojiť sa k LEROUX NOCI",both:"Žiadosť o licenciu a LEROUX NOC",
         h:"Dobrý deň,",t:"Divadlo / inštitúcia",c:"Mesto, krajina",n:"Meno",e:"E-mail",l:"Jazyk predstavenia",m:"Správa",
-        done:"Otvorí sa váš poštový program s pripravenou správou. Nič sa neodosiela automaticky."}
-  }[lang==="sk"?"sk":"fr"];
+        done:"Otvorí sa váš poštový program s pripravenou správou. Nič sa neodosiela automaticky."},
+    en:{lic:"Licence request",nuit:"Join the NUIT LEROUX",both:"Licence request and NUIT LEROUX",
+        h:"Hello,",t:"Theatre / institution",c:"City, country",n:"Name",e:"Email",l:"Language of the performance",m:"Message",
+        done:"Your email program opens with the message ready to send. Nothing is sent automatically."}
+  }[lang.slice(0,2)==="sk"?"sk":lang.slice(0,2)==="en"?"en":"fr"];
   function bind(form){
     if(form.__b)return;form.__b=1;
     form.addEventListener("submit",function(ev){

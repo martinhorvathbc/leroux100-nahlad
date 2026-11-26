@@ -1,0 +1,86 @@
+/* LEROUX100 – „Écoutez la musique / Ukážka hudby“ (7. 11. 2026)
+   Štýl LEROUX svet (site.css): teplá čierna, zrno, jantár, bordová, zlaté linky, Cormorant Garamond. Rovnaký rám a písmo ako animácia osi (#comment).
+   Bez Webbera, bez masky a ruže. Vizualizáciu kreslí hudba.js na canvas; bez JS ostanú natívne prehrávače (.mus-fb). */
+.mus-sec{--m-bg:#080504;--m-line:#34251a;--m-gold:#d6aa5c;--m-gold2:#efcc8a;--m-ink:#f3e6cb;--m-mute:#b1a38a;--m-dim:#8a7b64;--m-cream:#f1dfb6;--m-burg:#6f0f1d}
+.mus-headtxt{max-width:820px}
+.mus-headtxt h2{margin:10px 0 14px}
+.mus-lead{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(19px,1.7vw,23px);line-height:1.45;color:var(--m-ink);max-width:760px}
+.mus-txt{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(17.5px,1.5vw,20px);line-height:1.5;color:var(--m-mute);max-width:700px;margin-top:10px}
+.mus{margin-top:34px;position:relative}
+.mus-stage{position:relative;border:1px solid #402e1e;border-radius:4px;background:radial-gradient(ellipse 70% 60% at 50% 0,rgba(111,15,29,.22),transparent 70%),linear-gradient(180deg,#110a08,#070403);
+  box-shadow:inset 0 0 0 5px #0a0605,inset 0 0 0 6px rgba(214,170,92,.18),0 0 60px rgba(0,0,0,.5);padding:26px 26px 14px;overflow:hidden;isolation:isolate}
+.mus-stage:after{content:"";position:absolute;inset:-20px;pointer-events:none;background:url("viz_grain.png");background-size:128px 128px;opacity:.16;mix-blend-mode:screen;z-index:3}
+/* horná časť: čo hrá, časomiera, popisok + kruh sály */
+.mus-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,420px);gap:10px 40px;align-items:center}
+.mus-now{min-width:0}
+.mus-kick{display:block;font-family:Inter,system-ui,sans-serif;font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--m-gold);font-weight:500}
+.mus-name{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(30px,3.3vw,46px);line-height:1.1;color:var(--m-ink);margin-top:14px;text-shadow:0 0 26px rgba(214,170,92,.14);min-height:1.15em}
+.mus-name+.mus-clock{margin-top:16px}
+.mus-clock{display:flex;align-items:baseline;gap:14px;padding-bottom:12px;border-bottom:1px solid rgba(214,170,92,.22);max-width:520px}
+.mus-tc{font-family:Inter,system-ui,sans-serif;font-weight:300;font-size:clamp(38px,3.8vw,54px);line-height:1;letter-spacing:.01em;color:var(--m-ink);font-variant-numeric:tabular-nums lining-nums;font-feature-settings:"tnum" 1,"lnum" 1}
+.mus-tot{font-family:Inter,system-ui,sans-serif;font-size:13px;letter-spacing:.06em;color:var(--m-dim);font-variant-numeric:tabular-nums}
+.mus-cap{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:clamp(19px,1.7vw,23px);line-height:1.35;color:var(--m-gold2);margin-top:18px;max-width:520px}
+.mus-error{font-family:Inter,system-ui,sans-serif;font-size:13px;color:#ff7a86;margin-top:10px}
+.mus-plan{display:flex;justify-content:center}
+.mus-cv{width:100%;max-width:420px;aspect-ratio:1;display:block}
+/* zoznam stôp */
+.mus-list{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid rgba(214,170,92,.28)}
+.mus-trk{display:grid;grid-template-columns:44px minmax(150px,1fr) minmax(220px,1.5fr) 44px;column-gap:18px;align-items:center;padding:13px 6px 13px 10px;border-bottom:1px solid rgba(214,170,92,.14);position:relative;transition:background-color .5s}
+.mus-trk:before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:2px;background:var(--m-gold);opacity:0;transition:opacity .5s;box-shadow:0 0 10px rgba(239,204,138,.6)}
+.mus-trk.is-cur{background:linear-gradient(90deg,rgba(214,170,92,.07),transparent 70%)}
+.mus-trk.is-cur:before{opacity:1}
+.mus-btn{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--m-gold);background:transparent;color:var(--m-gold2);display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:inset 0 0 0 3px #0a0605,inset 0 0 0 4px rgba(214,170,92,.35);transition:background-color .25s,color .25s}
+.mus-btn:hover{background:rgba(214,170,92,.12)}
+.mus-btn:focus-visible,.mus-wave:focus-visible{outline:2px solid var(--m-gold2);outline-offset:3px}
+.mus-btn svg{width:16px;height:16px;fill:currentColor}
+.mus-btn .i-pause{display:none}
+.mus-trk.is-playing .mus-btn{background:linear-gradient(180deg,#f0cf8c,#d6aa5c 55%,#bd8c42);color:#1a0b05;box-shadow:inset 0 0 0 3px rgba(48,22,6,.3),0 0 20px rgba(214,170,92,.25)}
+.mus-trk.is-playing .mus-btn .i-pause{display:inline}
+.mus-trk.is-playing .mus-btn .i-play{display:none}
+.mus-info{min-width:0;display:flex;flex-direction:column;gap:2px}
+.mus-title{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(21px,1.9vw,25px);line-height:1.15;color:var(--m-mute);transition:color .4s}
+.mus-trk.is-cur .mus-title,.mus-trk:hover .mus-title{color:var(--m-ink)}
+.mus-sub{font-family:Inter,system-ui,sans-serif;font-size:12px;line-height:1.4;letter-spacing:.02em;color:var(--m-dim)}
+/* priebeh stopy: obálka hlasitosti, dá sa posúvať */
+.mus-wave{position:relative;height:46px;cursor:pointer;touch-action:pan-y;-webkit-user-select:none;user-select:none;border-radius:2px}
+.mus-bars{position:absolute;inset:0;display:flex;align-items:center;gap:1px}
+.mus-bars i{flex:1 1 0;min-width:1px;background:#4a3626;border-radius:1px;transition:background-color .2s}
+.mus-bars i.on{background:var(--m-gold)}
+.mus-trk.is-cur .mus-bars i{background:#5a4430}
+.mus-trk.is-cur .mus-bars i.on{background:var(--m-gold)}
+.mus-trk.is-playing .mus-bars i.on{box-shadow:0 0 6px rgba(239,204,138,.35)}
+.mus-wave:hover .mus-bars i:not(.on){background:#6b5236}
+.mus-head{position:absolute;top:-3px;bottom:-3px;left:calc(var(--p,0) * 100%);width:0;border-left:1.5px solid var(--m-gold2);box-shadow:0 0 10px 1px rgba(239,204,138,.5);opacity:0;transition:opacity .3s;pointer-events:none}
+.mus-trk.is-cur .mus-head{opacity:1}
+.mus-dur{font-family:Inter,system-ui,sans-serif;font-size:12.5px;letter-spacing:.04em;color:var(--m-dim);text-align:right;font-variant-numeric:tabular-nums}
+.mus-trk.is-cur .mus-dur{color:var(--m-mute)}
+.mus-fb{display:block;grid-column:2/-1;width:100%;margin-top:8px;height:36px;color-scheme:dark}
+.mus.is-js .mus-fb{display:none}
+.mus:not(.is-js) .mus-btn,.mus:not(.is-js) .mus-wave,.mus:not(.is-js) .mus-dur{display:none}
+.mus:not(.is-js) .mus-trk{grid-template-columns:minmax(0,1fr)}
+.mus:not(.is-js) .mus-fb{grid-column:1}
+.mus-credit{font-family:Inter,system-ui,sans-serif;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--m-mute);margin-top:18px;text-align:center;line-height:1.7}
+/* mobil a tablet */
+@media (max-width:860px){
+  .mus-stage{padding:18px 14px 8px}
+  .mus-top{grid-template-columns:1fr;gap:6px}
+  .mus-name{font-size:32px;margin-top:10px}
+  .mus-tc{font-size:40px}
+  .mus-clock{gap:10px;padding-bottom:10px}
+  .mus-cap{font-size:18.5px;margin-top:12px}
+  .mus-cv{max-width:320px}
+  .mus-trk{grid-template-columns:44px minmax(0,1fr) auto;row-gap:10px;padding:14px 2px 14px 8px}
+  .mus-btn,.mus-info,.mus-dur{grid-row:1}
+  .mus-wave{grid-column:1/-1;grid-row:2;height:40px}
+  .mus-fb{grid-column:1/-1}
+  .mus-credit{font-size:11px;letter-spacing:.1em}
+}
+@media (max-width:420px){
+  .mus-cv{max-width:290px}
+  .mus-tc{font-size:36px}
+  .mus-title{font-size:21px}
+}
+@media (prefers-reduced-motion:reduce){
+  .mus *,.mus-stage:after{animation:none!important;transition:none!important}
+}

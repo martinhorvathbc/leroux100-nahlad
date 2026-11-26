@@ -16,7 +16,7 @@
   var MODES=["voix","pic","narr","direct","special","music"];
 
   function Ring(svg){
-    var C=120,RS=104,n=12,i;
+    var C=120,RS=104,n=13,i;
     var halos=qa(svg,".r-halo"),spl=qa(svg,".r-spl"),rays=qa(svg,".r-ray"),gh=qa(svg,".r-gh"),src=q(svg,".r-src"),
         pul=qa(svg,".r-pul"),cv=qa(svg,".r-cv"),acts=qa(svg,".r-act"),stops=qa(svg,".r-c0,.r-c1,.r-c2");
     var I=[],ang=[];for(i=0;i<n;i++){I.push(0);ang.push(PI2*i/n-Math.PI/2)}
@@ -61,6 +61,11 @@
   function setup(root){
     if(root.__tla)return root.__tla;
     var TOT=parseFloat(root.getAttribute("data-total"))||4792,DUR=(parseFloat(root.getAttribute("data-dur"))||300)*1000;
+    var MAP=null;try{MAP=JSON.parse(root.getAttribute("data-map")||"null")}catch(e){}
+    function sm(u){return u*u*(3-2*u)}
+    function perf(ms){var t=ms/1000;if(!MAP)return Math.min(1,ms/DUR)*TOT;var L=MAP[MAP.length-1];if(t>=L[0])return L[1];
+      for(var i=1;i<MAP.length;i++){var a=MAP[i-1],b=MAP[i];if(b[0]>a[0]&&t>=a[0]&&t<b[0]){var u=(t-a[0])/(b[0]-a[0]);if(b[2])u=sm(u);return a[1]+(b[1]-a[1])*u}}return 0}
+    function inv(T){if(!MAP)return T/TOT*DUR;var lo=0,hi=DUR;for(var k=0;k<28;k++){var m=(lo+hi)/2;if(perf(m)<T)lo=m;else hi=m}return hi}
     var o={root:root,t:0,playing:false,started:false,ended:false,auto:false,last:0,raf:0};
     root.__tla=o;
     if(RM)return o;
@@ -78,6 +83,7 @@
     var mli=qa(root,".tla-mlist li").map(function(el){return{el:el,a:+el.getAttribute("data-a"),b:+el.getAttribute("data-b"),s:-1}});
     var aud=q(root,".tla-aud"),sndBtn=q(root,".tla-snd"),wantSnd=false;
     function audSync(force){if(!aud||!wantSnd)return;var want=o.t/1000;
+      if(aud.duration&&want>=aud.duration-.05){if(!aud.paused)aud.pause();return}
       if(o.playing&&!o.ended){if(force||Math.abs(aud.currentTime-want)>.7){try{aud.currentTime=want}catch(e){}}if(aud.paused){var pr=aud.play();if(pr&&pr.catch)pr.catch(function(){})}}
       else if(!aud.paused)aud.pause()}
     if(sndBtn&&aud)sndBtn.addEventListener("click",function(){wantSnd=!wantSnd;sndBtn.setAttribute("aria-pressed",wantSnd?"true":"false");
@@ -86,8 +92,8 @@
     var curCap=-1,curSnd="",curLum="",curPart="",curSec=-1,capTo=0;
     function find(arr,T){for(var i=0;i<arr.length;i++){if(T>=arr[i].a&&T<arr[i].b)return arr[i]}return null}
     function render(dt){
-      var p=Math.min(1,o.t/DUR),T=p*TOT;
-      ph.style.left=(p*100)+"%";bar.style.width=(p*100)+"%";root.style.setProperty("--p",(p*100).toFixed(3)+"%");
+      var p=Math.min(1,o.t/DUR),T=MAP?perf(o.t):p*TOT,pf=T/TOT;
+      ph.style.left=(pf*100)+"%";bar.style.width=(p*100)+"%";root.style.setProperty("--p",(pf*100).toFixed(3)+"%");
       for(var mi=0;mi<mli.length;mi++){var ml=mli[mi],ms=T>=ml.a?(T<ml.b?2:1):0;if(p>=1)ms=1;if(ms!==ml.s){ml.s=ms;ml.el.classList.toggle("is-on",ms>0);ml.el.classList.toggle("is-now",ms===2)}}
       var sec=Math.round(T);if(sec!==curSec){curSec=sec;tcEl.innerHTML=tcH(T);axis.setAttribute("aria-valuenow",sec);axis.setAttribute("aria-valuetext",tc(T))}
       for(var i=0;i<els.length;i++){var e=els[i],s=T>=e.a?(T<e.b||(e.b-e.a<40&&T<e.a+40)?2:1):0;
@@ -127,7 +133,7 @@
     q(root,".tla-again").addEventListener("click",restart);
     // posúvanie osou
     var drag=false,was=false;
-    function at(ev){var r=grid.getBoundingClientRect();var x=(ev.clientX-r.left)/r.width;o.t=Math.max(0,Math.min(1,x))*DUR;o.ended=o.t>=DUR;o.started=true;render(16)}
+    function at(ev){var r=grid.getBoundingClientRect();var x=(ev.clientX-r.left)/r.width;o.t=MAP?inv(Math.max(0,Math.min(1,x))*TOT):Math.max(0,Math.min(1,x))*DUR;o.ended=o.t>=DUR;o.started=true;render(16)}
     axis.addEventListener("pointerdown",function(ev){if(ev.button)return;drag=true;was=o.playing;stop();try{axis.setPointerCapture(ev.pointerId)}catch(e){}at(ev)});
     axis.addEventListener("pointermove",function(ev){if(drag)at(ev)});
     function up(){if(!drag)return;drag=false;if(was&&o.t<DUR)play()}
@@ -150,4 +156,51 @@
   function init(){[].forEach.call(document.querySelectorAll(".tla"),setup)}
   window.__tlainit=init;
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+})();
+
+/* Fantóm opery: popisky častí v hlavičke osi (Martin 10. 11. 2026 5.05). Všetky na jednej základnej línii (na mobile dva riadky), bez vodiacich liniek.
+   Prológ doľava na x=0, Prvé a Druhé dejstvo centrované v úseku, Tretie dejstvo nad úsekom (ak presahuje, doľava), Epilóg doprava na koniec osi.
+   Medzi popiskami v riadku vždy aspoň 16 px (nastavené 18); ak sa nezmestia, písmo sa po 0,5 px zmenší. */
+(function(){
+  var GAP=18,RH=23;
+  function layout(root){
+    var lane=root.querySelector(".tla-parts");if(!lane)return;
+    var segs=[].slice.call(lane.querySelectorAll(".tla-pseg"));if(!segs.length)return;
+    var LR=lane.getBoundingClientRect(),W=LR.width,two=window.matchMedia("(max-width:819px)").matches;
+    var base=two?12.5:15,fs=base,it,i,ok;
+    function measure(){return segs.map(function(sg){var l=sg.querySelector("b.l");l.style.left="auto";l.style.right="auto";l.style.transform="none";
+      return {sg:sg,l:l,n:sg.getAttribute("data-n"),s0:sg.getBoundingClientRect().left-LR.left,s1:sg.getBoundingClientRect().right-LR.left,w:l.getBoundingClientRect().width,x:0,row:0}})}
+    for(it=0;it<14;it++){
+      lane.style.setProperty("--pfs",fs+"px");
+      var L=measure(),by={};L.forEach(function(o){by[o.n]=o});
+      var P=L[0],A=L[1],B=L[2],C=L[3],E=L[4];/* LEROUX100: poradie namiesto slovenských názvov, aby fungovalo v EN aj FR */
+      P.x=0;
+      A.x=(A.s0+A.s1)/2-A.w/2;B.x=(B.s0+B.s1)/2-B.w/2;
+      C.x=C.w<=C.s1-C.s0?(C.s0+C.s1)/2-C.w/2:C.s1-C.w;
+      E.x=W-E.w;
+      if(two){P.row=0;C.row=0;A.row=1;B.row=1;E.row=1;if(A.x<0)A.x=0}
+      var rows=two?2:1;
+      // zľava doprava: pohyblivé (Prvé, Druhé) sa odtlačia doprava
+      for(var r=0;r<rows;r++){
+        var row=[P,A,B,C,E].filter(function(o){return o.row===r}),prev=null;
+        row.forEach(function(o){if(prev&&o!==C&&o!==E&&o.x<prev.x+prev.w+GAP)o.x=prev.x+prev.w+GAP;prev=o});
+        // sprava doľava: pohyblivé sa odtlačia doľava, ak narážajú na pevné (Tretie, Epilóg)
+        for(i=row.length-2;i>=0;i--){var a=row[i],n=row[i+1];if(a!==P&&a!==C&&a!==E&&a.x+a.w+GAP>n.x)a.x=n.x-GAP-a.w}
+      }
+      ok=true;
+      for(r=0;r<rows;r++){var rr=[P,A,B,C,E].filter(function(o){return o.row===r});
+        for(i=1;i<rr.length;i++)if(rr[i].x<rr[i-1].x+rr[i-1].w+GAP-.5)ok=false}
+      if(!two&&(A.x+A.w>A.s1-3||A.x<A.s0-1))ok=false;
+      if(!two&&(B.x<B.s0||B.x+B.w>B.s1))ok=false;
+      if(ok||fs<=11)break;
+      fs-=.5;
+    }
+    L.forEach(function(o){var l=o.l;l.style.transform="none";l.style.right="auto";l.style.left=(o.x-o.s0-o.sg.clientLeft)+"px";l.style.top=(o.row*RH)+"px"});
+    lane.style.setProperty("--tt",((two?2:1)*RH-1)+"px");lane.style.height=((two?2:1)*RH+8)+"px";
+  }
+  function all(){[].forEach.call(document.querySelectorAll(".tla"),layout)}
+  var tm=0;function later(){clearTimeout(tm);tm=setTimeout(all,60)}
+  window.addEventListener("resize",later);window.addEventListener("load",all);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(all);
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",all);else all();
 })();
